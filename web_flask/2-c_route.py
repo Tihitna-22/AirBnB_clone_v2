@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-"""This route module 
+"""This route module
 starts a Flask web application.
 """
 from flask import Flask
-
-
 app = Flask(__name__)
 
 
@@ -13,15 +11,18 @@ def hello_hbnb():
     """Prints  hello message"""
     return 'Hello HBNB!'
 
+
 @app.route('/hbnb')
-def hello_hbnb():
+def show_hbnb():
     """Prints  hbnb message"""
     return 'HBNB'
 
-@app.route('/c/text>')
+
+@app.route('/c/<text>')
 def disp_c(text):
-    """Prints  c with text message"""
-    return f"c {text}"
+    """Prints  c with text variable message"""
+    return 'C ' + text.replace('_', ' ')
+
 
 if __name__ == '__main__':
     app.url_map.strict_slashes = False
