@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This route module 
+"""This route module
 starts a Flask web application.
 """
 from flask import Flask
@@ -13,10 +13,12 @@ def hello_hbnb():
     """Prints  hello message"""
     return 'Hello HBNB!'
 
+
 @app.route('/hbnb')
 def show_hbnb():
     """Prints  hbnb message"""
     return 'HBNB'
+
 
 if __name__ == '__main__':
     app.url_map.strict_slashes = False
