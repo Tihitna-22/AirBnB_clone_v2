@@ -36,7 +36,6 @@ def display_if_number(n):
     return "{d} is a number".format(n)
 
 
-
 @app.route('/number_template/<int:n>')
 def display_number_template(n):
     """Returns the number with a template if it's an int for the
