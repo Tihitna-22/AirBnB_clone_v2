@@ -18,7 +18,7 @@ def show_hbnb():
     return 'HBNB'
 
 
-@app.route('/c/text>')
+@app.route('/c/<text>')
 def disp_c(text):
     """Prints  c with text message"""
     return 'C ' + text.replace('_', ' ')
