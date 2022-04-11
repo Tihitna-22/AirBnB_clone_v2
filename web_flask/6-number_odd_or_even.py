@@ -2,7 +2,7 @@
 """This route module
 starts a Flask web application.
 """
-from flask import Flask,render_template
+from flask import Flask, render_template
 app = Flask(__name__)
 
 
@@ -34,7 +34,6 @@ def python_text(text='is cool'):
 def display_if_number(n):
     """Returns the number if it's an integer"""
     return "{d} is a number".format(n)
-
 
 
 @app.route('/number_template/<int:n>')
