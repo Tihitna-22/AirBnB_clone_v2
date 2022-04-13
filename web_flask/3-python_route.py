@@ -24,7 +24,7 @@ def disp_c(text):
     return 'C ' + text.replace('_', ' ')
 
 
-@app.route('/python')
+@app.route('/python/')
 @app.route('/python/<text>')
 def python_text(text='is cool'):
     """return Python, followed by the value of the text variable"""
